@@ -164,7 +164,7 @@ private extension View {
 
                     VStack(spacing: 2) {
                         Text(monthYearString)
-                            .font(.quicksand(size: 20, weight: .bold))
+                            .font(.instrumentSerif(size: 22))
                             .foregroundColor(FeelPalette.primaryText(for: colorScheme))
                     }
 
@@ -2607,7 +2607,7 @@ struct GamifiedJournalView: View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Mood Calendar")
-                    .font(.quicksand(size: 26, weight: .bold))
+                    .font(.instrumentSerif(size: 28))
                     .foregroundColor(FeelPalette.primaryText(for: colorScheme))
 
                 Text("Track your emotional journey")

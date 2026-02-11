@@ -61,6 +61,8 @@
 		<string>Quicksand-Medium.ttf</string>
 		<string>Quicksand-SemiBold.ttf</string>
 		<string>Quicksand-Bold.ttf</string>
+		<string>InstrumentSerif-Regular.ttf</string>
+		<string>InstrumentSerif-Italic.ttf</string>
 	</array>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Zenya uses tracking to provide personalized wellness insights and improve your mental health journey while respecting your privacy.</string>

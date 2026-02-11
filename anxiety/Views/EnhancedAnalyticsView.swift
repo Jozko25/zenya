@@ -127,7 +127,7 @@ struct EnhancedAnalyticsView: View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Your Growth")
-                    .font(.quicksand(size: 26, weight: .bold))
+                    .font(.instrumentSerif(size: 28))
                     .foregroundColor(AnalyticsPalette.primaryText(for: colorScheme))
 
                 Text("Track your emotional journey")

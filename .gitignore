@@ -101,3 +101,10 @@ APIKeys.plist
 .env.*
 anxiety/Resources/Sounds/rain.wav
 anxiety/Resources/Sounds/rain.wav
+
+# Secrets and local config
+.mcp.json
+*.mcp.json
+.env
+.env.*
+anxietyUITests/supabase/

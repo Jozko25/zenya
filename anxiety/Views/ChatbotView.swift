@@ -342,7 +342,7 @@ struct ChatbotView: View {
                 }
 
                 Text("Your Guide")
-                    .font(.quicksand(size: 28, weight: .medium))
+                    .font(.instrumentSerif(size: 30))
                     .foregroundColor(ChatPalette.primaryText(for: colorScheme))
             }
 
@@ -434,7 +434,7 @@ struct ChatbotView: View {
 
             VStack(spacing: 12) {
                 Text("Your AI Wellness Guide")
-                    .font(.quicksand(size: 28, weight: .medium))
+                    .font(.instrumentSerif(size: 30))
                     .foregroundColor(ChatPalette.primaryText(for: colorScheme))
                     .multilineTextAlignment(.center)
 

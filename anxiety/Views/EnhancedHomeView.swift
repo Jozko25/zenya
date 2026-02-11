@@ -67,10 +67,30 @@ struct EnhancedHomeView: View {
     
     var body: some View {
         ZStack {
-            // Clean background
-            backgroundColor
-                .ignoresSafeArea()
-            
+            // Grainy gradient background
+            ZStack {
+                // Base dark color
+                Color.black
+
+                // Subtle radial gradient from center (pink tint)
+                RadialGradient(
+                    colors: [
+                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.08 : 0.04),
+                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.03 : 0.02),
+                        Color.clear
+                    ],
+                    center: .center,
+                    startRadius: 50,
+                    endRadius: UIScreen.main.bounds.height * 0.6
+                )
+
+                // Noise grain overlay
+                GrainOverlay()
+                    .opacity(colorScheme == .dark ? 0.4 : 0.2)
+                    .blendMode(.overlay)
+            }
+            .ignoresSafeArea()
+
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 30) {
                     // Header
@@ -356,14 +376,14 @@ struct EnhancedHomeView: View {
                    !userName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
                    userName != "Friend" {
                     (Text(timeBasedGreeting.replacingOccurrences(of: ".", with: ","))
-                        .font(.quicksand(size: 26, weight: .medium))
+                        .font(.instrumentSerif(size: 28))
                         .foregroundColor(primaryTextColor)
                     + Text(" \(userName.split(separator: " ").first.map(String.init) ?? userName)")
-                        .font(.quicksand(size: 26, weight: .medium))
+                        .font(.instrumentSerif(size: 28))
                         .foregroundColor(Color(hex: "FF5C7A")))
                 } else {
                     Text(timeBasedGreeting)
-                        .font(.quicksand(size: 28, weight: .medium))
+                        .font(.instrumentSerif(size: 30))
                         .foregroundColor(primaryTextColor)
                 }
 
@@ -491,17 +511,17 @@ struct EnhancedHomeView: View {
                 .allowsHitTesting(false)
 
                 // Text Overlay
-                VStack(spacing: 6) {
+                VStack(spacing: 8) {
                     Text("Current State")
-                        .font(.quicksand(size: 11, weight: .semibold))
-                        .foregroundColor(Color.white.opacity(0.5))
-                        .tracking(1.8)
+                        .font(.quicksand(size: 10, weight: .semibold))
+                        .foregroundColor(Color.white.opacity(0.55))
+                        .tracking(2.2)
                         .textCase(.uppercase)
 
                     Text(energyState.rawValue)
-                        .font(.quicksand(size: 36, weight: .medium))
+                        .font(.instrumentSerif(size: 42))
                         .foregroundColor(.white)
-                        .shadow(color: Color.black.opacity(0.35), radius: 6, x: 0, y: 3)
+                        .shadow(color: Color.black.opacity(0.4), radius: 8, x: 0, y: 4)
                 }
             }
             .frame(width: 300, height: 300)
@@ -591,14 +611,14 @@ struct EnhancedHomeView: View {
 
     // MARK: - Rhythm Graph (Real Data)
     private var rhythmGraph: some View {
-        VStack(alignment: .leading, spacing: 15) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Text("Today's Rhythm")
-                    .font(.quicksand(size: 16, weight: .medium))
+                    .font(.instrumentSerif(size: 18))
                     .foregroundColor(primaryTextColor)
                 Spacer()
                 Text("Last 7 Days")
-                    .font(.quicksand(size: 12, weight: .regular))
+                    .font(.quicksand(size: 11, weight: .medium))
                     .foregroundColor(secondaryTextColor)
             }
 
@@ -856,11 +876,11 @@ struct EnhancedHomeView: View {
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(title)
-                        .font(.system(size: 15, weight: .bold))
+                        .font(.quicksand(size: 15, weight: .semibold))
                         .foregroundColor(primaryTextColor)
 
                     Text(subtitle)
-                        .font(.system(size: 11, weight: .medium))
+                        .font(.quicksand(size: 11, weight: .medium))
                         .foregroundColor(secondaryTextColor.opacity(0.7))
                         .lineLimit(1)
                 }
@@ -1045,6 +1065,66 @@ enum EnergyState: String {
     case balanced = "Balanced"
     case elevated = "Elevated"
     case high = "High"
+}
+
+// MARK: - Grain Overlay
+
+struct GrainOverlay: View {
+    var body: some View {
+        GeometryReader { geometry in
+            Canvas { context, size in
+                // Create noise pattern using random dots
+                for _ in 0..<Int(size.width * size.height * 0.015) {
+                    let x = CGFloat.random(in: 0...size.width)
+                    let y = CGFloat.random(in: 0...size.height)
+                    let opacity = Double.random(in: 0.1...0.4)
+                    let radius = CGFloat.random(in: 0.5...1.2)
+
+                    context.fill(
+                        Path(ellipseIn: CGRect(x: x, y: y, width: radius, height: radius)),
+                        with: .color(Color.white.opacity(opacity))
+                    )
+                }
+            }
+        }
+    }
+}
+
+// Alternative: Static noise image generator for better performance
+struct StaticGrainTexture: View {
+    let intensity: Double
+
+    init(intensity: Double = 0.3) {
+        self.intensity = intensity
+    }
+
+    var body: some View {
+        Image(uiImage: generateNoiseImage())
+            .resizable()
+            .opacity(intensity)
+            .blendMode(.overlay)
+    }
+
+    private func generateNoiseImage() -> UIImage {
+        let size = CGSize(width: 200, height: 200)
+        let renderer = UIGraphicsImageRenderer(size: size)
+
+        return renderer.image { ctx in
+            let context = ctx.cgContext
+            context.setFillColor(UIColor.clear.cgColor)
+            context.fill(CGRect(origin: .zero, size: size))
+
+            for _ in 0..<6000 {
+                let x = CGFloat.random(in: 0...size.width)
+                let y = CGFloat.random(in: 0...size.height)
+                let gray = CGFloat.random(in: 0...1)
+                let alpha = CGFloat.random(in: 0.05...0.25)
+
+                context.setFillColor(UIColor(white: gray, alpha: alpha).cgColor)
+                context.fillEllipse(in: CGRect(x: x, y: y, width: 1.5, height: 1.5))
+            }
+        }
+    }
 }
 
 // MARK: - Preview
