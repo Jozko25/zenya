@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FB14F7E2E6636E700F47399 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB14F7D2E6636E700F47399 /* Auth */; };
+		9FB14F802E6636E700F47399 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB14F7F2E6636E700F47399 /* PostgREST */; };
+		9FB14F822E6636E700F47399 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB14F812E6636E700F47399 /* Storage */; };
+		9FFDE5CA2EAA9C88005E3FFF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9FFDE5C92EAA9C88005E3FFF /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F03E5B72E5F6B5600A7D596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F03E5A12E5F6B5500A7D596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F03E5A82E5F6B5500A7D596;
+			remoteInfo = anxiety;
+		};
+		9F03E5C12E5F6B5600A7D596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F03E5A12E5F6B5500A7D596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F03E5A82E5F6B5500A7D596;
+			remoteInfo = anxiety;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F03E5A92E5F6B5500A7D596 /* zenya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zenya.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F03E5B62E5F6B5600A7D596 /* zenyaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenyaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F03E5C02E5F6B5600A7D596 /* zenyaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenyaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9F18E5B72E6F345900D99FD5 /* Exceptions for "anxiety" folder in "zenya" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9F03E5A82E5F6B5500A7D596 /* zenya */;
+		};
+		9FFDE5D12EAA9F18005E3FFF /* Exceptions for "anxiety" folder in "zenyaTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Animations/hello-animation.json",
+				Resources/Images/fire.jpg,
+				Resources/Images/icon.png,
+				Resources/Images/logo.png,
+				Resources/Images/ocean.jpg,
+				Resources/Images/thunderstorm.jpg,
+				Resources/Sounds/fire.wav,
+				Resources/Sounds/rain.wav,
+				Resources/Sounds/thunderstorm.mp3,
+				Resources/Sounds/waves.wav,
+				Views/SubscriptionManagementView.swift,
+			);
+			target = 9F03E5B52E5F6B5600A7D596 /* zenyaTests */;
+		};
+		9FFDE5D22EAA9F18005E3FFF /* Exceptions for "anxiety" folder in "zenyaUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Animations/hello-animation.json",
+				Resources/Images/fire.jpg,
+				Resources/Images/icon.png,
+				Resources/Images/logo.png,
+				Resources/Images/ocean.jpg,
+				Resources/Images/thunderstorm.jpg,
+				Views/SubscriptionManagementView.swift,
+			);
+			target = 9F03E5BF2E5F6B5600A7D596 /* zenyaUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9F03E5AB2E5F6B5500A7D596 /* anxiety */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9F18E5B72E6F345900D99FD5 /* Exceptions for "anxiety" folder in "zenya" target */,
+				9FFDE5D12EAA9F18005E3FFF /* Exceptions for "anxiety" folder in "zenyaTests" target */,
+				9FFDE5D22EAA9F18005E3FFF /* Exceptions for "anxiety" folder in "zenyaUITests" target */,
+			);
+			path = anxiety;
+			sourceTree = "<group>";
+		};
+		9F03E5B92E5F6B5600A7D596 /* anxietyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = anxietyTests;
+			sourceTree = "<group>";
+		};
+		9F03E5C32E5F6B5600A7D596 /* anxietyUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = anxietyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F03E5A62E5F6B5500A7D596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB14F822E6636E700F47399 /* Storage in Frameworks */,
+				9FB14F802E6636E700F47399 /* PostgREST in Frameworks */,
+				9FB14F7E2E6636E700F47399 /* Auth in Frameworks */,
+				9FFDE5CA2EAA9C88005E3FFF /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5B32E5F6B5600A7D596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5BD2E5F6B5600A7D596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F03E5A02E5F6B5500A7D596 = {
+			isa = PBXGroup;
+			children = (
+				9F03E5AB2E5F6B5500A7D596 /* anxiety */,
+				9F03E5B92E5F6B5600A7D596 /* anxietyTests */,
+				9F03E5C32E5F6B5600A7D596 /* anxietyUITests */,
+				9F03E5AA2E5F6B5500A7D596 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F03E5AA2E5F6B5500A7D596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F03E5A92E5F6B5500A7D596 /* zenya.app */,
+				9F03E5B62E5F6B5600A7D596 /* zenyaTests.xctest */,
+				9F03E5C02E5F6B5600A7D596 /* zenyaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F03E5A82E5F6B5500A7D596 /* zenya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F03E5CA2E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenya" */;
+			buildPhases = (
+				9F03E5A52E5F6B5500A7D596 /* Sources */,
+				9F03E5A62E5F6B5500A7D596 /* Frameworks */,
+				9F03E5A72E5F6B5500A7D596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9F03E5AB2E5F6B5500A7D596 /* anxiety */,
+			);
+			name = zenya;
+			packageProductDependencies = (
+				9FB14F7D2E6636E700F47399 /* Auth */,
+				9FB14F7F2E6636E700F47399 /* PostgREST */,
+				9FB14F812E6636E700F47399 /* Storage */,
+				9FFDE5C92EAA9C88005E3FFF /* Lottie */,
+			);
+			productName = anxiety;
+			productReference = 9F03E5A92E5F6B5500A7D596 /* zenya.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F03E5B52E5F6B5600A7D596 /* zenyaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F03E5CD2E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenyaTests" */;
+			buildPhases = (
+				9F03E5B22E5F6B5600A7D596 /* Sources */,
+				9F03E5B32E5F6B5600A7D596 /* Frameworks */,
+				9F03E5B42E5F6B5600A7D596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F03E5B82E5F6B5600A7D596 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9F03E5B92E5F6B5600A7D596 /* anxietyTests */,
+			);
+			name = zenyaTests;
+			packageProductDependencies = (
+			);
+			productName = anxietyTests;
+			productReference = 9F03E5B62E5F6B5600A7D596 /* zenyaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F03E5BF2E5F6B5600A7D596 /* zenyaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F03E5D02E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenyaUITests" */;
+			buildPhases = (
+				9F03E5BC2E5F6B5600A7D596 /* Sources */,
+				9F03E5BD2E5F6B5600A7D596 /* Frameworks */,
+				9F03E5BE2E5F6B5600A7D596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F03E5C22E5F6B5600A7D596 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9F03E5C32E5F6B5600A7D596 /* anxietyUITests */,
+			);
+			name = zenyaUITests;
+			packageProductDependencies = (
+			);
+			productName = anxietyUITests;
+			productReference = 9F03E5C02E5F6B5600A7D596 /* zenyaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F03E5A12E5F6B5500A7D596 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					9F03E5A82E5F6B5500A7D596 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					9F03E5B52E5F6B5600A7D596 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9F03E5A82E5F6B5500A7D596;
+					};
+					9F03E5BF2E5F6B5600A7D596 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9F03E5A82E5F6B5500A7D596;
+					};
+				};
+			};
+			buildConfigurationList = 9F03E5A42E5F6B5500A7D596 /* Build configuration list for PBXProject "zenya" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F03E5A02E5F6B5500A7D596;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9FB14F7A2E6633D300F47399 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				9FFDE5C82EAA9C88005E3FFF /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9F03E5AA2E5F6B5500A7D596 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F03E5A82E5F6B5500A7D596 /* zenya */,
+				9F03E5B52E5F6B5600A7D596 /* zenyaTests */,
+				9F03E5BF2E5F6B5600A7D596 /* zenyaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F03E5A72E5F6B5500A7D596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5B42E5F6B5600A7D596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5BE2E5F6B5600A7D596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F03E5A52E5F6B5500A7D596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5B22E5F6B5600A7D596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F03E5BC2E5F6B5600A7D596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F03E5B82E5F6B5600A7D596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F03E5A82E5F6B5500A7D596 /* zenya */;
+			targetProxy = 9F03E5B72E5F6B5600A7D596 /* PBXContainerItemProxy */;
+		};
+		9F03E5C22E5F6B5600A7D596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F03E5A82E5F6B5500A7D596 /* zenya */;
+			targetProxy = 9F03E5C12E5F6B5600A7D596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F03E5C82E5F6B5600A7D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F03E5C92E5F6B5600A7D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F03E5CB2E5F6B5600A7D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF7M292VWB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = anxiety/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Zenya;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "daj mic kokot";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F03E5CC2E5F6B5600A7D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF7M292VWB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = anxiety/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Zenya;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "daj mic kokot";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F03E5CE2E5F6B5600A7D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenyaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zenya.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zenya";
+			};
+			name = Debug;
+		};
+		9F03E5CF2E5F6B5600A7D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenyaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zenya.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zenya";
+			};
+			name = Release;
+		};
+		9F03E5D12E5F6B5600A7D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenyaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = anxiety;
+			};
+			name = Debug;
+		};
+		9F03E5D22E5F6B5600A7D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janharmady.zenyaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = anxiety;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F03E5A42E5F6B5500A7D596 /* Build configuration list for PBXProject "zenya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F03E5C82E5F6B5600A7D596 /* Debug */,
+				9F03E5C92E5F6B5600A7D596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F03E5CA2E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F03E5CB2E5F6B5600A7D596 /* Debug */,
+				9F03E5CC2E5F6B5600A7D596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F03E5CD2E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenyaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F03E5CE2E5F6B5600A7D596 /* Debug */,
+				9F03E5CF2E5F6B5600A7D596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F03E5D02E5F6B5600A7D596 /* Build configuration list for PBXNativeTarget "zenyaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F03E5D12E5F6B5600A7D596 /* Debug */,
+				9F03E5D22E5F6B5600A7D596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FB14F7A2E6633D300F47399 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		9FFDE5C82EAA9C88005E3FFF /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FB14F7D2E6636E700F47399 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FB14F7A2E6633D300F47399 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		9FB14F7F2E6636E700F47399 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FB14F7A2E6633D300F47399 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		9FB14F812E6636E700F47399 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FB14F7A2E6633D300F47399 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		9FFDE5C92EAA9C88005E3FFF /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FFDE5C82EAA9C88005E3FFF /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9F03E5A12E5F6B5500A7D596 /* Project object */;
+}

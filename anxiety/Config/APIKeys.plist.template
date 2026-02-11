@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  APIKeys.plist.template
+  
+  SETUP: Copy this file to APIKeys.plist and add your actual API keys
+  IMPORTANT: APIKeys.plist is in .gitignore and should NEVER be committed
+-->
+<plist version="1.0">
+<dict>
+	<!-- OpenAI API Key for AI chat features -->
+	<key>OpenAI_API_Key</key>
+	<string>YOUR_OPENAI_API_KEY_HERE</string>
+	
+	<!-- OpenWeather API Key for weather-based mood predictions -->
+	<key>OpenWeather_API_Key</key>
+	<string>YOUR_OPENWEATHER_API_KEY_HERE</string>
+	
+	<!-- Supabase Configuration -->
+	<key>Supabase_URL</key>
+	<string>YOUR_SUPABASE_PROJECT_URL</string>
+	<key>Supabase_Anon_Key</key>
+	<string>YOUR_SUPABASE_ANON_KEY</string>
+	
+	<!-- Add more API keys here as needed -->
+</dict>
+</plist>

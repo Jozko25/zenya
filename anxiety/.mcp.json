@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "/Users/janharmady/.local/share/fnm/node-versions/v20.19.4/installation/bin/npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=ejtdmxnaauqkhdgslwyi",
+        "--read-only"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_ae2182f5fe00c4cf1363c4156cedea778f96a9c8",
+        "PATH": "/Users/janharmady/.local/share/fnm/node-versions/v20.19.4/installation/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_PATH": "/Users/janharmady/.local/share/fnm/node-versions/v20.19.4/installation/lib/node_modules"
+      }
+    }
+  }
+}
