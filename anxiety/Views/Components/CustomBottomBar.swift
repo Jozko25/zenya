@@ -60,16 +60,20 @@ struct CustomBottomBar: View {
                 Capsule()
                     .fill(colorScheme == .dark ? Color(hex: "0D0D0D") : Color(hex: "F8F8FA"))
 
-                // Very subtle glass overlay
+                // Grainy texture overlay
                 Capsule()
-                    .fill(.ultraThinMaterial.opacity(colorScheme == .dark ? 0.15 : 0.4))
+                    .fill(Color.clear)
+                    .overlay(
+                        BottomBarGrainTexture(intensity: colorScheme == .dark ? 0.25 : 0.1)
+                            .clipShape(Capsule())
+                    )
 
                 // Subtle inner gradient
                 Capsule()
                     .fill(
                         LinearGradient(
                             colors: [
-                                colorScheme == .dark ? Color.white.opacity(0.04) : Color.white.opacity(0.7),
+                                colorScheme == .dark ? Color.white.opacity(0.03) : Color.white.opacity(0.5),
                                 Color.clear
                             ],
                             startPoint: .top,
@@ -80,7 +84,7 @@ struct CustomBottomBar: View {
                 // Border
                 Capsule()
                     .stroke(
-                        colorScheme == .dark ? Color.white.opacity(0.06) : Color(hex: "E8E8EA"),
+                        colorScheme == .dark ? Color.white.opacity(0.08) : Color(hex: "E8E8EA"),
                         lineWidth: 0.5
                     )
             }
@@ -93,6 +97,40 @@ struct CustomBottomBar: View {
         )
         .padding(.horizontal, 20)
         .padding(.bottom, 2)
+    }
+}
+
+// MARK: - Grain Texture for Bottom Bar
+
+struct BottomBarGrainTexture: View {
+    let intensity: Double
+
+    var body: some View {
+        Image(uiImage: generateNoiseImage())
+            .resizable()
+            .opacity(intensity)
+            .blendMode(.overlay)
+    }
+
+    private func generateNoiseImage() -> UIImage {
+        let size = CGSize(width: 150, height: 50)
+        let renderer = UIGraphicsImageRenderer(size: size)
+
+        return renderer.image { ctx in
+            let context = ctx.cgContext
+            context.setFillColor(UIColor.clear.cgColor)
+            context.fill(CGRect(origin: .zero, size: size))
+
+            for _ in 0..<1500 {
+                let x = CGFloat.random(in: 0...size.width)
+                let y = CGFloat.random(in: 0...size.height)
+                let gray = CGFloat.random(in: 0.3...0.7)
+                let alpha = CGFloat.random(in: 0.08...0.2)
+
+                context.setFillColor(UIColor(white: gray, alpha: alpha).cgColor)
+                context.fillEllipse(in: CGRect(x: x, y: y, width: 1.2, height: 1.2))
+            }
+        }
     }
 }
 

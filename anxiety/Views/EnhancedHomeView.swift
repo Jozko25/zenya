@@ -67,28 +67,9 @@ struct EnhancedHomeView: View {
     
     var body: some View {
         ZStack {
-            // Grainy gradient background
-            ZStack {
-                // Base dark color
-                Color.black
-
-                // Subtle radial gradient from center (pink tint) - more visible
-                RadialGradient(
-                    colors: [
-                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.15 : 0.08),
-                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.08 : 0.04),
-                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.03 : 0.01),
-                        Color.clear
-                    ],
-                    center: .center,
-                    startRadius: 20,
-                    endRadius: UIScreen.main.bounds.height * 0.7
-                )
-
-                // Noise grain overlay - using Image-based approach for better performance
-                StaticGrainTexture(intensity: colorScheme == .dark ? 0.35 : 0.15)
-            }
-            .ignoresSafeArea()
+            // Clean background
+            backgroundColor
+                .ignoresSafeArea()
 
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 30) {
