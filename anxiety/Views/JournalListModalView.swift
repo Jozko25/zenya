@@ -125,9 +125,9 @@ struct JournalListModalView: View {
                             HStack {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text("Your Reflections")
-                                        .font(.quicksand(size: 24, weight: .bold))
+                                        .font(.instrumentSerif(size: 26))
                                         .foregroundColor(AdaptiveColors.Text.primary)
-                                    
+
                                     Text("\(journalEntries.count) entries")
                                         .font(.quicksand(size: 14, weight: .medium))
                                         .foregroundColor(AdaptiveColors.Text.secondary)

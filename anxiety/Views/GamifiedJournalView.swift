@@ -1126,7 +1126,7 @@ struct DayMoodDetailView: View {
             HStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(prediction.moodState.rawValue)
-                        .font(.quicksand(size: 28, weight: .semibold))
+                        .font(.instrumentSerif(size: 30))
                         .foregroundStyle(
                             LinearGradient(
                                 colors: prediction.moodState.gradientColors,

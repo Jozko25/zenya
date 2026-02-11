@@ -80,7 +80,7 @@ struct SOSSupportView: View {
 
             VStack(spacing: 10) {
                 Text("You're Safe Here")
-                    .font(.quicksand(size: 28, weight: .bold))
+                    .font(.instrumentSerif(size: 30))
                     .foregroundColor(AdaptiveColors.Text.primary)
 
                 Text("Help is available 24/7. You don't have to face this alone.")
@@ -94,7 +94,7 @@ struct SOSSupportView: View {
     private var emergencyActionsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Get Help Now")
-                .font(.quicksand(size: 18, weight: .bold))
+                .font(.instrumentSerif(size: 20))
                 .foregroundColor(AdaptiveColors.Text.primary)
 
             VStack(spacing: 10) {

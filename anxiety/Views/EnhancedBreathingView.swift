@@ -144,7 +144,7 @@ struct EnhancedBreathingView: View {
 
                     VStack(spacing: 10) {
                         Text("Ready to Breathe?")
-                            .font(.quicksand(size: 28, weight: .bold))
+                            .font(.instrumentSerif(size: 30))
                             .foregroundColor(AdaptiveColors.Text.primary)
 
                         Text("Take a moment to check in with yourself")
@@ -453,13 +453,13 @@ struct EnhancedBreathingView: View {
     private var phaseInstructionView: some View {
         VStack(spacing: 8) {
             Text(currentPhase.instruction)
-                .font(.quicksand(size: 30, weight: .bold))
+                .font(.instrumentSerif(size: 32))
                 .foregroundColor(AdaptiveColors.Text.primary)
                 .animation(.easeInOut, value: currentPhase)
 
             if isSessionActive && currentPhase != .ready {
                 Text(getPhaseCountdown())
-                    .font(.quicksand(size: 44, weight: .light))
+                    .font(.instrumentSerif(size: 48))
                     .foregroundColor(AdaptiveColors.Text.secondary)
                     .monospacedDigit()
             }
@@ -576,7 +576,7 @@ struct EnhancedBreathingView: View {
 
             VStack(spacing: 10) {
                 Text("Session Complete!")
-                    .font(.quicksand(size: 26, weight: .bold))
+                    .font(.instrumentSerif(size: 28))
                     .foregroundColor(AdaptiveColors.Text.primary)
 
                 Text("You completed \(cycleCount) breathing cycles")

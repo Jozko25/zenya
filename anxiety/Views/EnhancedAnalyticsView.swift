@@ -286,7 +286,7 @@ struct EnhancedAnalyticsView: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(value)
-                    .font(.quicksand(size: 26, weight: .bold))
+                    .font(.instrumentSerif(size: 28))
                     .foregroundColor(AnalyticsPalette.primaryText(for: colorScheme))
 
                 Text(title)
@@ -340,7 +340,7 @@ struct EnhancedAnalyticsView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Activity Heatmap")
-                        .font(.quicksand(size: 18, weight: .bold))
+                        .font(.instrumentSerif(size: 20))
                         .foregroundColor(AnalyticsPalette.primaryText(for: colorScheme))
 
                     Text("Last 5 weeks")
@@ -455,7 +455,7 @@ struct EnhancedAnalyticsView: View {
     private var insightsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Insights")
-                .font(.quicksand(size: 18, weight: .bold))
+                .font(.instrumentSerif(size: 20))
                 .foregroundColor(AnalyticsPalette.primaryText(for: colorScheme))
 
             VStack(spacing: 12) {
