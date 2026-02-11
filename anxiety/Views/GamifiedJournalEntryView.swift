@@ -349,11 +349,11 @@ struct GamifiedJournalEntryView: View {
             // Typography - Apple style
             VStack(spacing: 8) {
                 Text("All Done")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .font(.instrumentSerif(size: 30))
                     .foregroundColor(JournalEntryPalette.primaryText(for: colorScheme))
 
                 Text("Reflection complete")
-                    .font(.system(size: 17, weight: .regular))
+                    .font(.quicksand(size: 17, weight: .regular))
                     .foregroundColor(JournalEntryPalette.secondaryText(for: colorScheme))
             }
             .padding(.bottom, 32)
@@ -377,7 +377,7 @@ struct GamifiedJournalEntryView: View {
                         .tracking(0.5)
 
                     Text(timeRemainingString())
-                        .font(.system(size: 44, weight: .light, design: .rounded))
+                        .font(.instrumentSerif(size: 48))
                         .foregroundColor(JournalEntryPalette.primaryText(for: colorScheme))
                         .monospacedDigit()
 
@@ -460,12 +460,11 @@ struct GamifiedJournalEntryView: View {
             // Time-based greeting with refined typography
             VStack(alignment: .leading, spacing: 10) {
                 Text(timeBasedPrompt)
-                    .font(.system(size: 32, weight: .bold, design: .default))
+                    .font(.instrumentSerif(size: 34))
                     .foregroundColor(JournalEntryPalette.primaryText(for: colorScheme))
-                    .tracking(-0.5)
 
                 Text(motivationalSubtitle)
-                    .font(.system(size: 16, weight: .regular))
+                    .font(.quicksand(size: 16, weight: .regular))
                     .foregroundColor(JournalEntryPalette.secondaryText(for: colorScheme))
             }
 
@@ -1576,7 +1575,7 @@ struct GamifiedJournalEntryViewWithCooldown: View {
                 }
 
                 Text("Reflection Complete")
-                    .font(.quicksand(size: 26, weight: .medium))
+                    .font(.instrumentSerif(size: 28))
                     .foregroundColor(.white)
             }
 
@@ -1600,7 +1599,7 @@ struct GamifiedJournalEntryViewWithCooldown: View {
                     }
 
                     Text("03:30")
-                        .font(.quicksand(size: 32, weight: .medium))
+                        .font(.instrumentSerif(size: 36))
                         .foregroundColor(Color(hex: "FF5C7A"))
                         .monospacedDigit()
                 }
