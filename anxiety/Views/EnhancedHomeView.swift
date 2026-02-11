@@ -72,22 +72,21 @@ struct EnhancedHomeView: View {
                 // Base dark color
                 Color.black
 
-                // Subtle radial gradient from center (pink tint)
+                // Subtle radial gradient from center (pink tint) - more visible
                 RadialGradient(
                     colors: [
+                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.15 : 0.08),
                         Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.08 : 0.04),
-                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.03 : 0.02),
+                        Color(hex: "FF5C7A").opacity(colorScheme == .dark ? 0.03 : 0.01),
                         Color.clear
                     ],
                     center: .center,
-                    startRadius: 50,
-                    endRadius: UIScreen.main.bounds.height * 0.6
+                    startRadius: 20,
+                    endRadius: UIScreen.main.bounds.height * 0.7
                 )
 
-                // Noise grain overlay
-                GrainOverlay()
-                    .opacity(colorScheme == .dark ? 0.4 : 0.2)
-                    .blendMode(.overlay)
+                // Noise grain overlay - using Image-based approach for better performance
+                StaticGrainTexture(intensity: colorScheme == .dark ? 0.35 : 0.15)
             }
             .ignoresSafeArea()
 

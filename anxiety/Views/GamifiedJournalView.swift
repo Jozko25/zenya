@@ -488,7 +488,7 @@ struct CalendarDayView: View {
                     }
 
                     Text(dayNumber)
-                        .font(.quicksand(size: 16, weight: isToday || isSelected ? .bold : .medium))
+                        .font(.instrumentSerif(size: 17))
                         .foregroundColor(textColor)
                 }
 
@@ -894,11 +894,11 @@ struct DayMoodDetailView: View {
                 // Score display
                 VStack(spacing: 2) {
                     Text(String(format: "%.1f", prediction.predictedMood))
-                        .font(.system(size: 32, weight: .bold, design: .rounded))
+                        .font(.instrumentSerif(size: 36))
                         .foregroundColor(colorScheme == .dark ? .white : Color(hex: "1A1A1A"))
 
                     Text("/ 10")
-                        .font(.system(size: 11, weight: .medium))
+                        .font(.quicksand(size: 11, weight: .medium))
                         .foregroundColor(colorScheme == .dark ? Color.white.opacity(0.4) : Color.black.opacity(0.4))
                 }
             }
@@ -906,7 +906,7 @@ struct DayMoodDetailView: View {
 
             // State name with subtle gradient
             Text(prediction.moodState.rawValue)
-                .font(.system(size: 23, weight: .semibold))
+                .font(.instrumentSerif(size: 26))
                 .foregroundColor(colorScheme == .dark ? .white : Color(hex: "1A1A1A"))
                 .padding(.bottom, 6)
 
@@ -1044,7 +1044,7 @@ struct DayMoodDetailView: View {
 
             // Title
             Text("Unlock Predictions")
-                .font(.system(size: 22, weight: .bold))
+                .font(.instrumentSerif(size: 24))
                 .foregroundColor(colorScheme == .dark ? .white : Color(hex: "1A1A1A"))
                 .padding(.bottom, 6)
 
